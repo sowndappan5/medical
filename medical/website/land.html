@@ -19,30 +19,8 @@
       <div class="flex items-center">
         <button type="button" class="text-gray-900 text-base font-semibold mr-4">Home</button>
         <div class="dropdown">
-          <button type="button" class="text-gray-900 text-base font-semibold mr-4">Our hospitals</button>
-          <div class="dropdown-content hidden absolute text-base z-10">
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Pinderfields Hospital</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Pontefract Hospital</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Dewsbury and District Hospital</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Community Services</a>
-          </div>
-        </div>
-        <button type="button" class="text-gray-900 text-base font-semibold mr-4">Patients and visitors</button>
-        <button type="button" class="text-gray-900 text-base font-semibold mr-4">View our services</button>
-        <button type="button" class="text-gray-900 text-base font-semibold mr-4">Work for us</button>
-        <div class="dropdown">
-          <button type="button" class="text-gray-900 text-base font-semibold mr-4">About us</button>
-          <div class="dropdown-content hidden absolute text-base z-10">
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our Trust</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our performance</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our values</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our vision</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our strategy</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our leadership team</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Our history</a>
-            <a href="#" class="block py-2 px-4 hover:bg-gray-100">Contact us</a>
-          </div>
-        </div>
+          <button link class="text-gray-900 text-base font-semibold mr-4"><a href="hospitals.html">Our hospitals</a></button>
+          
       </div>
       <div class="flex items-center">
         <form action="#">
@@ -50,6 +28,25 @@
           <button type="submit" class="bg-blue-900 text-white rounded-md py-2 px-4 text-sm font-semibold">Search</button>
         </form>
       </div>
+        <div class="icon" onclick="toggleNotifi()">
+          <img src="img/bell.png" alt=""> <span>2</span>
+        </div>
+        <div class="notifi-box" id="box">
+          <h2>Notifications <span>1</span></h2>
+          <div class="notifi-item font-semibold">
+            <div class="text">
+               <h4>Elias Abdurrahman</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+              </div> 
+          </div>
+    
+          <div class="notifi-item font-semibold">
+            <div class="text">
+               <h4>John Doe</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+              </div> 
+          </div>
+          </div>
     </div>
   </nav>
   <main class="container mx-auto py-12">
@@ -126,6 +123,6 @@
       </div>
     </section>
   </main>
-  
+  <script src="script.js"></script>
 </body>
 </html>
