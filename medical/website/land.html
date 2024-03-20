@@ -11,6 +11,12 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   </style>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+   <script type="text/javascript">
+     (function() {
+     emailjs.init("ygCtOmiUs3HRS-si2");
+     })();
+  </script> 
 </head>
 <body class="bg-white text-gray-900 font-inter">
   
@@ -19,7 +25,7 @@
       <div class="flex items-center">
         <button type="button" class="text-gray-900 text-base font-semibold mr-4">Home</button>
         <div class="dropdown">
-          <button link class="text-gray-900 text-base font-semibold mr-4"><a href="hospitals.html">Our hospitals</a></button>
+          <button link class="text-gray-900 text-base font-semibold mr-4"><a href="hospitals.html">Hospitals</a></button>
           
       </div>
       <div class="flex items-center">
@@ -29,7 +35,7 @@
         </form>
       </div>
         <div class="icon" onclick="toggleNotifi()">
-          <img src="img/bell.png" alt=""> <span>2</span>
+          <img src="images/bell.png" alt=""> <span>2</span>
         </div>
         <div class="notifi-box" id="box">
           <h2>Notifications <span>1</span></h2>
@@ -47,8 +53,11 @@
               </div> 
           </div>
           </div>
+          <h3 class="email">santoshsowndappan@gmail.com</h3>
+
     </div>
   </nav>
+  
   <main class="container mx-auto py-12">
     <section class="flex flex-col items-center justify-center">
       <h2 class="text-3xl font-semibold text-center">Suggest Hospital locations , providing details , contact information Based on your option</h2>
@@ -83,7 +92,7 @@
                 <label for="check-other">O-</label>
               </div>  
           </div>  
-        <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4"><a href="index.html">Submit</a></button>
+        <button onclick="sendemail()" type="button"  class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4">Submit</button>
       </div>
       </div>
       <div class="bg-white rounded-md shadow-md p-4">
@@ -93,7 +102,7 @@
           <label>What types of Medicine needed ?</label>
           <input type="text" placeholder="Enter here"  />
         </div>
-        <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4"><a href="index.html">Submit</a></button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4">Submit</button>
 
       </div>
       <div class="bg-white rounded-md shadow-md p-3 mt-2">
@@ -123,6 +132,25 @@
       </div>
     </section>
   </main>
+  <script>function sendemail(){
+
+    var email=document.getElementById("email").value;
+    var message=document.getElementById("gender").value;
+  
+    var templateParams = {
+          email: email,
+      message: message
+        };
+  
+        emailjs.send('service_luts4ha', 'template_e62wmk9', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       window.alert("Sent successfully!");
+       
+    })
+  
+       
+  }</script>
   <script src="script.js"></script>
 </body>
 </html>
