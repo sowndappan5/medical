@@ -11,12 +11,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   </style>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
-   <script type="text/javascript">
-     (function() {
-     emailjs.init("ygCtOmiUs3HRS-si2");
-     })();
-  </script> 
+   
 </head>
 <body class="bg-white text-gray-900 font-inter">
   
@@ -92,7 +87,7 @@
                 <label for="check-other">O-</label>
               </div>  
           </div>  
-        <button onclick="sendemail()" type="button"  class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4">Submit</button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded mt-4"><a href="index.html">Submit</a></button>
       </div>
       </div>
       <div class="bg-white rounded-md shadow-md p-4">
@@ -132,25 +127,7 @@
       </div>
     </section>
   </main>
-  <script>function sendemail(){
-
-    var email=document.getElementById("email").value;
-    var message=document.getElementById("gender").value;
-  
-    var templateParams = {
-          email: email,
-      message: message
-        };
-  
-        emailjs.send('service_luts4ha', 'template_e62wmk9', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-       window.alert("Sent successfully!");
-       
-    })
-  
-       
-  }</script>
+ 
   <script src="script.js"></script>
 </body>
 </html>
