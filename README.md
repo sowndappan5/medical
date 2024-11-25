@@ -1,13 +1,13 @@
 # Medical Website Prototype
 
-Welcome to Hospital Network Website Prototype repository! This project aims to create a prototype for a medical website that connects multiple hospitals together. The prototype provides a glimpse into the potential functionalities and features of such platform.
+Welcome to the Hospital Network Website Prototype repository! This project aims to create a prototype for a medical website that connects multiple hospitals together. The prototype provides a glimpse into the potential functionalities and features of such platform.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contribution](#contributing)
 
 ## Introduction
 
